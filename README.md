@@ -1,1 +1,1 @@
-[Moonstruck.Community](moonstruck.community)
+[Moonstruck.Community](www.moonstruck.community)
