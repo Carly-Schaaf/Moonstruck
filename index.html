@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil" rel="stylesheet">
+    <link rel="stylesheet" href="./output.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <script>
+        $(() => {
+                const sendEmail = (email) => {
+                    return $.ajax({
+                        type: 'POST',
+                        url: 'https://hooks.zapier.com/hooks/catch/4733270/7bonf2/',
+                        data: {
+                            'from_email': `${email}`,
+                        }
+                    }).then((response) => {
+                        console.log(response);
+                    });
+                };
+                let email = "";
+                const emailInput = document.getElementById("email-input");
+                emailInput.addEventListener("change", (e) => {
+                    e.preventDefault();
+                    email += e.target.value
+                })
+                const mapForm = document.getElementsByClassName("map-form")[0];
+                mapForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    sendEmail(email).then(() => {
+                        emailInput.value = "Success!"
+                    });
+                })
+           
+            const watch = document.getElementById("click-watch")
+            const video = document.getElementById("video")
+            const about = document.getElementById("click-about")
+            const aboutSection = document.getElementById("about")
+            const team = document.getElementById("click-team")
+            const teamSection = document.getElementById("team")
+      
+            watch.addEventListener("click", (e) => {
+                if (!aboutSection.classList.contains("hide")) {
+                    aboutSection.classList.add("hide")
+                }
+                if (!teamSection.classList.contains("hide")) {
+                    teamSection.classList.add("hide")
+                }
+                if (!video.classList.contains("hide")) {
+                    return;
+                } else {
+                    video.classList.toggle("hide");
+                }
+            })
+            about.addEventListener("click", (e) => {
+                if (!video.classList.contains("hide")) {
+                    video.classList.toggle("hide")
+                }
+                if (!teamSection.classList.contains("hide")) {
+                    teamSection.classList.add("hide")
+                }
+                if (!aboutSection.classList.contains("hide")) {
+                    return;
+                } else {
+                    aboutSection.classList.toggle("hide");
+                }
+            })
+            team.addEventListener("click", (e) => {
+                if (!video.classList.contains("hide")) {
+                    video.classList.toggle("hide")
+                }
+                if (!aboutSection.classList.contains("hide")) {
+                    aboutSection.classList.add("hide")
+                }
+                if (!teamSection.classList.contains("hide")) {
+                    return;
+                } else {
+                    teamSection.classList.toggle("hide");
+                }
+            })
+            
+        
+        })
+
+    </script>
+    <title>Moonstruck: A Concert Series</title>
+</head>
+
+<body >
+        <div class="container">
+            <img class="logo" src="MoonstruckLogo1.png" alt="">
+            <img class="moon" src="moon.png" alt="">
+        </div>
+        <div class="presenting-container">
+            <div class="shadow-presenting">
+                May 18 2019
+            </div>
+            <div class="presenting">
+                May 18 2019
+            </div>
+        </div>
+        <div class="rsvp">
+            <form class="map-form">
+                <input required id="email-input" placeholder="email" type="text" autocomplete="off" />
+                <input id="map-submit" type="submit" value="send me a map" />
+            </form>
+        </div>
+           
+        <div class="master-item-container">
+                <a href="#video">
+                <div id="click-watch">watch</div></a>
+          
+                <div id="click-about" class="click-about">about</div>
+                <div id="click-team" class="click-team">team</div>
+        </div>
+        <p class="video-container">
+            <iframe id="video" class="video hide" src="https://player.vimeo.com/video/333164739?app_id=122963" width="1026" height="700"
+                frameborder="0" title="Moonstruck - April 2019" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
+        <p id="about" class="hide">
+            Moonstruck is a wild concert series, taking place every full moon.
+            <br>
+            We present music, poetry, and art in the urban wilderness of the East Bay.
+            <br>
+            All of our concerts explore what it means to call this place home.
+            <br>
+            <br>
+        </p>
+        <p id="team" class="hide">
+            Anna B — visual and installation art <br>
+            Anna Cone – vocals/guitar <br>
+            Ariel Wang – violin/guitar/vocals <br>
+            Aziz Yehia – percussion <br>
+            Baylor Obadashian – banjo/keys & matchmaking <br>
+            Carly Schaaf – web design & stage lighting <br>
+            Daniel Goldberg – saxophone <br>
+            Danny Dalton – saxophone/vocals <br>
+            Derek Sup - keys/vocals <br>
+            Gabrielle Lochard – vocals <br>
+            Jaren Feeley – vocals/keys & team coordination <br>
+            Kuhuk Goyal – rap <br>
+            Hannah Levy – vocals/bass <br>
+            Lewis Patzner - cello <br>
+            Maya Elise – vocals/guitar <br>
+            Noor Al-Samarrai – poetry <br>
+            Selena Feliciano – vocals/percussion & promotion <br>
+            Yeshe Salz – vocals/percussion <br>
+            Zach Giberson – guitar/vocals <br>
+        </p>
+        <img class="landscape" src="landscape.jpg" alt="Bay Area Landscape Hand-Drawn">
+
+    </body>
+
+</html>
