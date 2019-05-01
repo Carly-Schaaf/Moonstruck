@@ -78,9 +78,10 @@ html, body {
   -o-transition: -o-transform 8s ease-out;
   transition: transform 8s ease-out;
 }
-.moon:hover {
-  -moz-transform: rotate(360deg);
+
+.moon-hover:hover {
   -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
   -o-transform: rotate(360deg);
   -ms-transform: rotate(360deg);
   transform: rotate(360deg);

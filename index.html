@@ -90,17 +90,23 @@
                 }
             })
             
+            const isFirefox = typeof InstallTrigger !== 'undefined';
+            const moon = document.getElementById("moon");
+            if (isFirefox) {
+                moon.classList.remove("moon-hover");
+            }
+            
         
         })
 
     </script>
-    <title>Moonstruck: A Concert Series</title>
+    <title>moonstruck: a wild concert series</title>
 </head>
 
 <body >
         <div class="container">
             <img class="logo" src="MoonstruckLogo1.png" alt="">
-            <img class="moon" src="moon.png" alt="">
+            <img id="moon" class="moon moon-hover" src="moon.png" alt="">
         </div>
         <div class="presenting-container">
             <div class="shadow-presenting">
