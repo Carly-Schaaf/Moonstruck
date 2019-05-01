@@ -53,11 +53,17 @@ html, body {
   max-height: 100vh;
   position: absolute;
   padding: 43px;
-  -webkit-transition: -webkit-transform 8s;
-  transition: transform 8s; }
+  -webkit-transition: -webkit-transform 8s ease-out;
+  -moz-transition: -moz-transform 8s ease-out;
+  -ms-transition: -ms-transform 8s ease-out;
+  -o-transition: -o-transform 8s ease-out;
+  transition: transform 8s ease-out; }
 
 .moon:hover {
+  -moz-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
   transform: rotate(360deg); }
 
 .rsvp {
