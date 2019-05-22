@@ -16,104 +16,22 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    <script>
-        $(() => {
-                const sendEmail = (email) => {
-                    return $.ajax({
-                        type: 'POST',
-                        url: 'https://hooks.zapier.com/hooks/catch/4733270/7bonf2/',
-                        data: {
-                            'from_email': `${email}`,
-                        }
-                    }).then((response) => {
-                        console.log(response);
-                    });
-                };
-                let email = "";
-                const emailInput = document.getElementById("email-input");
-                emailInput.addEventListener("change", (e) => {
-                    e.preventDefault();
-                    email += e.target.value
-                })
-                const mapForm = document.getElementsByClassName("map-form")[0];
-                mapForm.addEventListener("submit", (e) => {
-                    e.preventDefault();
-                    sendEmail(email).then(() => {
-                        emailInput.value = "Success!"
-                    });
-                })
-           
-            const watch = document.getElementById("click-watch")
-            const video = document.getElementById("video")
-            const about = document.getElementById("click-about")
-            const aboutSection = document.getElementById("about")
-            const team = document.getElementById("click-team")
-            const teamSection = document.getElementById("team")
-      
-            watch.addEventListener("click", (e) => {
-                if (!aboutSection.classList.contains("hide")) {
-                    aboutSection.classList.add("hide")
-                }
-                if (!teamSection.classList.contains("hide")) {
-                    teamSection.classList.add("hide")
-                }
-                if (!video.classList.contains("hide")) {
-                    return;
-                } else {
-                    video.classList.toggle("hide");
-                }
-            })
-            about.addEventListener("click", (e) => {
-                if (!video.classList.contains("hide")) {
-                    video.classList.toggle("hide")
-                }
-                if (!teamSection.classList.contains("hide")) {
-                    teamSection.classList.add("hide")
-                }
-                if (!aboutSection.classList.contains("hide")) {
-                    return;
-                } else {
-                    aboutSection.classList.toggle("hide");
-                }
-            })
-            team.addEventListener("click", (e) => {
-                if (!video.classList.contains("hide")) {
-                    video.classList.toggle("hide")
-                }
-                if (!aboutSection.classList.contains("hide")) {
-                    aboutSection.classList.add("hide")
-                }
-                if (!teamSection.classList.contains("hide")) {
-                    return;
-                } else {
-                    teamSection.classList.toggle("hide");
-                }
-            })
-            
-            const isFirefox = typeof InstallTrigger !== 'undefined';
-            const moon = document.getElementById("moon");
-            if (isFirefox) {
-                moon.classList.remove("moon-hover");
-            }
-            
-        
-        })
-
-    </script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="main.js"></script>
     <title>moonstruck: a wild concert series</title>
 </head>
 
 <body >
         <div class="container">
             <img class="logo" src="MoonstruckLogo1.png" alt="">
-            <img id="moon" class="moon moon-hover" src="moon.png" alt="">
+            <img id="moon" class="moon" src="moon.png" alt="">
         </div>
         <div class="presenting-container">
             <div class="shadow-presenting">
-                May 18 2019
+                June 15 2019
             </div>
             <div class="presenting">
-                May 18 2019
+                June 15 2019
             </div>
         </div>
         <div class="rsvp">
@@ -145,6 +63,7 @@
         <p id="team" class="hide">
             Anna B — visual and installation art <br>
             Anna Cone – vocals/guitar <br>
+            Annie – videographer <br>
             Ariel Wang – violin/guitar/vocals <br>
             Aziz Yehia – percussion <br>
             Baylor Obadashian – banjo/keys & matchmaking <br>
