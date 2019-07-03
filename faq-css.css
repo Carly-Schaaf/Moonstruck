@@ -1,0 +1,66 @@
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: border-box;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  list-style-position: outside;
+ }
+
+button, input[type="submit"], input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  -webkit-appearance: none; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #020202;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+}
+
+body {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.titles {
+    font-weight: 600;
+    text-align: center;
+}
+
+.title {
+    width: 100vw;
+    display: inline-block;
+    text-align: center;
+    font-size: 40px;
+    margin-right: 0px;
+}
+
+img {
+    width: 800px;
+}
+
+.main {
+    margin-left: 300px;
+    margin-right: 300px;
+}

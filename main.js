@@ -7,10 +7,15 @@ $(() => {
     })
     const mapForm = document.getElementsByClassName("map-form")[0];
     mapForm.addEventListener("submit", (e) => {
-        emailInput.value = "."
+        let dots = [".", ".", "."];
+        emailInput.value = dots.pop();
         const interval = setInterval(() => {
-            emailInput.value += "."
-        }, 600)
+            if (dots.length === 0) {
+                emailInput.value = "";
+                dots = [".", ".", "."];
+            }
+            emailInput.value += dots.pop();
+        }, 500)
         e.preventDefault();
         sendEmail(email).then(() => {
             clearInterval(interval)
@@ -25,7 +30,7 @@ $(() => {
     const sendEmail = () => {
         emailjs.init("user_UxeLdiW1OeBWci89CbGWV");
         var service_id = "default_service";
-        var template_id = "template_pPWZiqLS";
+        var template_id = "moonstruck_map_pending";
         return emailjs.send(service_id, template_id, {"email": email})
         }
 

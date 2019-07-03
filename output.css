@@ -47,10 +47,11 @@ html, body {
   max-height: 100vh; }
 
 .moon {
+  z-index: 5;
   height: auto;
   width: auto;
-  max-width: 100vw;
-  max-height: 100vh;
+  max-width: 92%;
+  max-height: 125%;
   position: absolute;
   padding: 43px;
   -webkit-transition: -webkit-transform 8s ease-out;
@@ -232,9 +233,12 @@ html, body {
   line-height: 100%;
   height: 100px;
   margin-bottom: 115px; }
-  @media screen and (max-width: 560px) {
+  @media screen and (max-width: 600px) {
     .presenting-container {
-      font-size: 25vw;
+      font-size: 20vw;
+      height: 70px; } }
+  @media screen and (max-width: 550px) {
+    .presenting-container {
       margin-bottom: 0px; } }
 
 .presenting {
