@@ -30,7 +30,7 @@ $(() => {
     const sendEmail = () => {
         emailjs.init("user_UxeLdiW1OeBWci89CbGWV");
         var service_id = "default_service";
-        var template_id = "moonstruck_map_pending";
+        var template_id = "template_pPWZiqLS";
         return emailjs.send(service_id, template_id, {"email": email})
         }
 
