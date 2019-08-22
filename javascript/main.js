@@ -18,21 +18,56 @@ $(() => {
         }, 500)
         e.preventDefault();
         sendEmail(email).then(() => {
-            clearInterval(interval)
-            emailInput.value = "check your inbox :)"
-        }, (error) => {
-                clearInterval(interval);
-                emailInput.value = "hm, that email's not valid";
-                email = "";
-            });
+            addToMailingList(email)
+                .then(res => successCb(interval), err => {
+                    const reason = err.responseJSON.title
+                    if (reason === "Member Exists") {
+                        console.log(err.responseJSON);
+                        successCb(interval);
+                    } else {
+                        failCb(err, interval);
+                    }});
+        }, (err) => failCb(err, interval));
     })
-    
+    const failCb = (err, interval) => {
+        console.log(err.responseJSON)
+        clearInterval(interval);
+        emailInput.value = "hm, that email's not valid";
+        email = "";
+    }
+    const successCb = (interval) => {
+        clearInterval(interval);
+        emailInput.value = "check your inbox :)";
+        email = "";
+    }
+    const addToMailingList = async (email) => {
+        const { key } = await $.ajax({
+            method: "GET",
+            url: "/key",
+        })
+        const data = {
+            "email_address": email,
+            "status": "subscribed",
+            "merge_fields": {}
+        };
+        return $.ajax({
+            method: "POST",
+            url: "https://cors-anywhere.herokuapp.com/https://us20.api.mailchimp.com/3.0/lists/7d94a1db70/members/",
+            data: JSON.stringify(data),
+            headers: {
+                "Content-type": "application/json",
+                "Authorization": `Basic ${key}`
+            }
+        })
+
+    }
+
     const sendEmail = () => {
         emailjs.init("user_UxeLdiW1OeBWci89CbGWV");
         var service_id = "default_service";
         var template_id = "moonstruck_map_pending";
         return emailjs.send(service_id, template_id, {"email": email})
-        }
+    }
 
     const watch = document.getElementById("click-watch")
     const video = document.getElementById("video")
@@ -89,5 +124,6 @@ $(() => {
         }
     }
 
-  
 })
+
+
