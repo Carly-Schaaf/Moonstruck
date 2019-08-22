@@ -44,6 +44,7 @@ html, body {
     background-color: #020202;
     font-family: $font;
     overflow-x: hidden; 
+    width: 100vw;
 }
 
 .container {
@@ -73,6 +74,10 @@ html, body {
   -ms-transition: -ms-transform 8s ease-out;
   -o-transition: -o-transform 8s ease-out;
   transition: transform 8s ease-out;
+
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+  }
   
   // @media screen and (max-width: 1028px) {
   //   max-height: 110vh;
@@ -240,6 +245,7 @@ html, body {
     width: auto; 
     max-width: 100vw; 
     max-height: 100vh;
+    box-shadow: 0 50vh 0 50vh;
 }
 
 .master-item-container {
@@ -283,9 +289,9 @@ html, body {
   height: 100px;
   margin-bottom: 115px;
 
-  @media screen and (max-width: 600px) {
-    font-size: 20vw;
-    height: 70px;
+  @media screen and (max-width: 900px) {
+    font-size: 15vw;
+    height: 45px;
   }
   @media screen and (max-width: 550px) {
     margin-bottom: 0px;
