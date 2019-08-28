@@ -15,7 +15,7 @@ The entirety of the frontend design was built with JavaScript, HTML5, and SASS-c
 
 ![Bottom)](https://user-images.githubusercontent.com/39382120/63893736-cb577400-c99f-11e9-8549-5dd77b22bfae.png)
 
-## The concert
+### The concert
 Moonstruck is a wild concert series, taking place every full moon. We present music, poetry, and art in the urban wilderness of the East Bay. All of our concerts explore what it means to call this place home. If you like music and find yourself in the Bay Area, please RSVP for our next show!
 
 This project was designed and built in one week.
