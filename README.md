@@ -1,6 +1,6 @@
 ## Moonstruck
 
-[Live Link](https://www.moonstruck.community)
+[Live Link](www.moonstruck.community)
 
 Moonstruck is a minimalist, design-focused website I designed and built for an ongoing concert series. It has been used by 300+ concert-goers.
 
