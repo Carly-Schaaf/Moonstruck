@@ -18,15 +18,17 @@ $(() => {
         }, 500)
         e.preventDefault();
         sendEmail(email).then(() => {
-            addToMailingList(email)
-                .then(res => successCb(interval), err => {
-                    const reason = err.responseJSON.title
-                    if (reason === "Member Exists") {
-                        console.log(err.responseJSON);
-                        successCb(interval);
-                    } else {
-                        failCb(err, interval);
-                    }});
+            // code for mailing list integration below
+            // addToMailingList(email)
+            // .then(res => successCb(interval), err => {
+            //     const reason = err.responseJSON.title
+            //     if (reason === "Member Exists") {
+            //         console.log(err.responseJSON);
+            //         successCb(interval);
+            //     } else {
+            //         failCb(err, interval);
+            //     }});
+            successCb(interval)
         }, (err) => failCb(err, interval));
     })
     const failCb = (err, interval) => {
