@@ -4,12 +4,12 @@
 
 Moonstruck is a minimalist, design-focused website I designed and built for an ongoing concert series. It has been used by 300+ concert-goers.
 
-![Top](https://user-images.githubusercontent.com/39382120/63893732-cb577400-c99f-11e9-9eb6-3e9c1fd28f0f.png)
+![Top](https://user-images.githubusercontent.com/39382120/68413800-d2d78e00-0143-11ea-8191-84ab1d7d6a74.png)
 
 ### The website
 Concert-goers can RSVP on the website and will receive an automated email containing a map to our next concert's secret location. I researched and experimented with a number of email integrations before landing on an external, newly developed JavaScript email API which enables the site to stay entirely browser-based and lightweight.
 
-![Middle](https://user-images.githubusercontent.com/39382120/63893734-cb577400-c99f-11e9-9259-911d66a6ce9c.png)
+![Middle](https://user-images.githubusercontent.com/39382120/68413760-ba677380-0143-11ea-8fce-9804e50e93ea.png)
 
 The entirety of the frontend design was built with JavaScript, HTML5, and SASS-compiled CSS3. The artwork featured on the site was custom-made for the concert series. Using CSS3 animations, I gave the hand-drawn moon a rotation effect, implemented a moving gradient that shadows the concert date, and gave a wiggle effect to the RSVP button. The design is fully responsive and device-agnostic.
 
