@@ -337,6 +337,10 @@ $strips-angle:45deg;//90deg;
     border-bottom: 1px solid white;
   }
 
+  a.selected {
+    border-bottom: 1px solid white;
+  }
+
   :last-child {
     margin-right: 0;
   }

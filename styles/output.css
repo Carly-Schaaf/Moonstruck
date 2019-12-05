@@ -283,6 +283,8 @@ html, body {
     border-bottom: 1px solid transparent; }
   .video-nav-container a:hover {
     border-bottom: 1px solid white; }
+  .video-nav-container a.selected {
+    border-bottom: 1px solid white; }
   .video-nav-container :last-child {
     margin-right: 0; }
 
