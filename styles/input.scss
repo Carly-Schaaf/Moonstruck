@@ -320,3 +320,25 @@ $strips-angle:45deg;//90deg;
   -webkit-text-fill-color: transparent;
   animation: dash-animation 50s infinite linear;
 }
+
+.video-nav-container {
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 1em;
+
+  div {
+    margin-right: 4em;
+    border-bottom: 1px solid transparent;
+  }
+
+  div:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+}

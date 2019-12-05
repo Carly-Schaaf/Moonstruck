@@ -272,4 +272,19 @@ html, body {
   -webkit-text-fill-color: transparent;
   animation: dash-animation 50s infinite linear; }
 
+.video-nav-container {
+  display: flex;
+  color: white;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 1em; }
+  .video-nav-container div {
+    margin-right: 4em;
+    border-bottom: 1px solid transparent; }
+  .video-nav-container div:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer; }
+  .video-nav-container :last-child {
+    margin-right: 0; }
+
 /*# sourceMappingURL=output.css.map */
