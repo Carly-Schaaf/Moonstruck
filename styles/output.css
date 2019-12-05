@@ -168,7 +168,12 @@ html, body {
 
 #video-container {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  position: relative;
+  top: 45px; }
+  @media screen and (max-width: 600px) {
+    #video-container {
+      top: 0; } }
 
 @media screen and (max-width: 560px) {
   #video {
@@ -277,9 +282,11 @@ html, body {
   color: whitesmoke;
   justify-content: center;
   font-size: 2em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  position: relative;
+  top: 80px; }
   .video-nav-container a {
-    margin-right: 4em;
+    margin-right: 50px;
     border-bottom: 1px solid transparent; }
   .video-nav-container a:hover {
     border-bottom: 1px solid white; }
@@ -287,5 +294,9 @@ html, body {
     border-bottom: 1px solid white; }
   .video-nav-container :last-child {
     margin-right: 0; }
+  @media screen and (max-width: 600px) {
+    .video-nav-container {
+      top: 13px;
+      font-size: 1em; } }
 
 /*# sourceMappingURL=output.css.map */

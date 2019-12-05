@@ -39,12 +39,12 @@ $foreground-color: darkslategrey;
 
 
 html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #020202;
-    font-family: $font;
-    overflow-x: hidden; 
-    width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #020202;
+  font-family: $font;
+  overflow-x: hidden; 
+  width: 100vw;
 }
 
 .container {
@@ -191,6 +191,12 @@ html, body {
 #video-container {
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 45px;
+
+    @media screen and (max-width: 600px) {
+      top: 0;
+  }
 }
 
 #video {
@@ -327,9 +333,11 @@ $strips-angle:45deg;//90deg;
   justify-content: center;
   font-size: 2em;
   margin-top: 1em;
+  position: relative;
+  top: 80px;
 
   a {
-    margin-right: 4em;
+    margin-right: 50px;
     border-bottom: 1px solid transparent;
   }
 
@@ -343,5 +351,10 @@ $strips-angle:45deg;//90deg;
 
   :last-child {
     margin-right: 0;
+  }
+
+  @media screen and (max-width: 600px) {
+      top: 13px;
+      font-size: 1em;
   }
 }

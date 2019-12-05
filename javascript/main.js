@@ -77,7 +77,7 @@ $(() => {
 
         const topPadding = 30;
         window.scrollTo({
-            top: videoSection.offsetTop - topPadding,
+            top: videoNav.offsetTop - topPadding,
             behavior: "smooth"
         });
     })
