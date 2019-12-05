@@ -180,7 +180,7 @@ html, body {
   font-size: 40px;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 7%; }
+  padding-top: 7%; }
   @media screen and (max-width: 560px) {
     #about {
       font-size: 20px; } }
@@ -191,7 +191,7 @@ html, body {
   font-size: 40px;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 4%; }
+  padding-top: 4%; }
   @media screen and (max-width: 560px) {
     #team {
       font-size: 20px; } }
@@ -274,7 +274,7 @@ html, body {
 
 .video-nav-container {
   display: flex;
-  color: white;
+  color: whitesmoke;
   justify-content: center;
   font-size: 2em;
   margin-top: 1em; }

@@ -49,6 +49,7 @@ $(() => {
     const videoSection = document.getElementById("video-section");
     const videoNav = document.getElementById("video-nav");
     const videoPlayer = document.getElementById("video");
+    let alreadyWatched = false;
 
     const about = document.getElementById("click-about");
     const aboutSection = document.getElementById("about");
@@ -57,6 +58,11 @@ $(() => {
     const teamSection = document.getElementById("team");
 
     watch.addEventListener("click", (e) => {
+        if (!alreadyWatched) {
+            window.location.hash = "#video/2019/april";
+            alreadyWatched = true;
+        }
+
         if (!aboutSection.classList.contains("hide")) {
             aboutSection.classList.add("hide");
         }
@@ -69,8 +75,9 @@ $(() => {
             videoSection.classList.toggle("hide");
         }
 
+        const topPadding = 30;
         window.scrollTo({
-            top: videoSection.offsetTop,
+            top: videoSection.offsetTop - topPadding,
             behavior: "smooth"
         });
     })
