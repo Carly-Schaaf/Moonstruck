@@ -18,16 +18,6 @@ $(() => {
         }, 500)
         e.preventDefault();
         sendEmail(email).then(() => {
-            // code for mailing list integration below
-            // addToMailingList(email)
-            // .then(res => successCb(interval), err => {
-            //     const reason = err.responseJSON.title
-            //     if (reason === "Member Exists") {
-            //         console.log(err.responseJSON);
-            //         successCb(interval);
-            //     } else {
-            //         failCb(err, interval);
-            //     }});
             successCb(interval)
         }, (err) => failCb(err, interval));
     })
@@ -41,27 +31,6 @@ $(() => {
         clearInterval(interval);
         emailInput.value = "check your inbox :)";
         email = "";
-    }
-    const addToMailingList = async (email) => {
-        const { key } = await $.ajax({
-            method: "GET",
-            url: "/key",
-        })
-        const data = {
-            "email_address": email,
-            "status": "subscribed",
-            "merge_fields": {}
-        };
-        return $.ajax({
-            method: "POST",
-            url: "https://cors-anywhere.herokuapp.com/https://us20.api.mailchimp.com/3.0/lists/7d94a1db70/members/",
-            data: JSON.stringify(data),
-            headers: {
-                "Content-type": "application/json",
-                "Authorization": `Basic ${key}`
-            }
-        })
-
     }
 
     const sendEmail = () => {
