@@ -287,7 +287,8 @@ html, body {
   top: 80px; }
   .video-nav-container a {
     margin-right: 50px;
-    border-bottom: 1px solid transparent; }
+    border-bottom: 1px solid transparent;
+    z-index: 10; }
   .video-nav-container a:hover {
     border-bottom: 1px solid white; }
   .video-nav-container a.selected {
