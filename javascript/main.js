@@ -68,6 +68,11 @@ $(() => {
         } else {
             videoSection.classList.toggle("hide");
         }
+
+        window.scrollTo({
+            top: videoSection.offsetTop,
+            behavior: "smooth"
+        });
     })
 
     about.addEventListener("click", (e) => {
