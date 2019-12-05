@@ -41,8 +41,9 @@ $(() => {
     }
 
     const watch = document.getElementById("click-watch");
+    const videoSection = document.getElementById("video-section");
     const videoNav = document.getElementById("video-nav");
-    const videoContainer = document.getElementById("video-container");
+    const videoPlayer = document.getElementById("video");
 
     const about = document.getElementById("click-about");
     const aboutSection = document.getElementById("about");
@@ -57,16 +58,16 @@ $(() => {
         if (!teamSection.classList.contains("hide")) {
             teamSection.classList.add("hide");
         }
-        if (!videoNav.classList.contains("hide")) {
+        if (!videoSection.classList.contains("hide")) {
             return;
         } else {
-            videoNav.classList.toggle("hide");
+            videoSection.classList.toggle("hide");
         }
     })
 
     about.addEventListener("click", (e) => {
-        if (!videoNav.classList.contains("hide")) {
-            videoNav.classList.toggle("hide");
+        if (!videoSection.classList.contains("hide")) {
+            videoSection.classList.toggle("hide");
         }
         if (!teamSection.classList.contains("hide")) {
             teamSection.classList.add("hide");
@@ -79,8 +80,8 @@ $(() => {
     })
 
     team.addEventListener("click", (e) => {
-        if (!videoNav.classList.contains("hide")) {
-            videoNav.classList.toggle("hide");
+        if (!videoSection.classList.contains("hide")) {
+            videoSection.classList.toggle("hide");
         }
         if (!aboutSection.classList.contains("hide")) {
             aboutSection.classList.add("hide");
@@ -91,17 +92,20 @@ $(() => {
             teamSection.classList.toggle("hide");
         }
     });
-    
-    if (window.location.hash.includes('video')) {
-        // if (window.location.hash === '#video/2019/april') {
-            
-        //     videoContainer.append("<iframe id='video' class='video hide' src='https://player.vimeo.com/video/333164739?app_id=122963' width='1026' height='700'frameborder='0' title='Moonstruck - April 2019' allow='autoplay; fullscreen' allowfullscreen></iframe>")
-        // } else if (window.location.hash === '#video/2019/june') {
-        //     videoContainer.innerHTMl = "<iframe id='video' class='video hide' src='https://player.vimeo.com/video/355640738?app_id=122963' width='1026' height='700'frameborder='0' title='Moonstruck - April 2019' allow='autoplay; fullscreen' allowfullscreen/>"
-        // } else {
-        //     videoContainer.innerHTMl = "<iframe id='video' class='video hide' src='https://player.vimeo.com/video/370476412?app_id=122963' width='1026' height='700'frameborder='0' title='Moonstruck - April 2019' allow='autoplay; fullscreen' allowfullscreen/>"
-        // }
-    }
+
+    window.addEventListener("hashchange", (e) => {
+        if (window.location.hash.includes("video")) {
+            let src = "";
+            if (window.location.hash === '#video/2019/april') {
+                src = `https://player.vimeo.com/video/333164739?app_id=122963`;
+            } else if (window.location.hash === '#video/2019/june') {
+                src = `https://player.vimeo.com/video/355640738?app_id=122963`;
+            } else {
+                src = `https://player.vimeo.com/video/370476412?app_id=122963`;
+            }
+            video.src = src;
+        }
+    })
 
     const moon = document.getElementById("moon");
     window.onload = () => {
