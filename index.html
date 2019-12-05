@@ -16,7 +16,7 @@
     <title>moonstruck: a wild concert series</title>
 </head>
 
-<body >
+<body>
         <a style="display: none;" href="http://moonstruck.community/faqs">FAQ PAGE HERE</a>
         <div class="container">
             <img class="logo" src="./images/moonstruck_logo.png" alt="">
@@ -38,16 +38,22 @@
         </div>
            
         <div class="master-item-container">
-                <a href="#video">
-                <div id="click-watch">watch</div></a>
-          
-                <div id="click-about" class="click-about">about</div>
-                <div id="click-team" class="click-team">team</div>
+                <div id="click-watch">watch</div>
+                <a href="#about"><div id="click-about" class="click-about">about</div></a>
+                <a href="#team"><div id="click-team" class="click-team">team</div></a>
         </div>
-        <p class="video-container">
-            <iframe id="video" class="video hide" src="https://player.vimeo.com/video/333164739?app_id=122963" width="1026" height="700"
-                frameborder="0" title="Moonstruck - April 2019" allow="autoplay; fullscreen" allowfullscreen></iframe></p>
-        <p id="about" class="hide">
+        <div id="video-section" class="hide">
+            <nav id="video-nav" class="video-nav-container">
+                <a id="april" href="#video/2019/april">April 2019</a>
+                <a id="june" href="#video/2019/june">June 2019</a>
+                <a id="august" href="#video/2019/august">August 2019</a>
+            </nav>
+            <p id="video-container">
+                <iframe id='video' class='video' src='https://player.vimeo.com/video/333164739?app_id=122963' width='1026'
+                height='700' frameborder='0' title='Moonstruck - April 2019' allow='fullscreen' allowfullscreen ></iframe>
+            </p>
+        </div>
+        <section id="about" class="hide">
             Moonstruck is a wild concert series, taking place every full moon.
             <br>
             We present music, poetry, and art in the urban wilderness of the East Bay.
@@ -55,8 +61,8 @@
             All of our concerts explore what it means to call this place home.
             <br>
             <br>
-        </p>
-        <p id="team" class="hide">
+        </section>
+        <section id="team" class="hide">
             Anna B — visual and installation art <br>
             Anna Cone – vocals/guitar <br>
             Annie – videographer <br>
@@ -77,7 +83,7 @@
             Selena Feliciano – vocals/percussion & promotion <br>
             Yeshe Salz – vocals/percussion <br>
             Zach Giberson – guitar/vocals <br>
-        </p>
+        </section>
         <img class="landscape" src="./images/dark_landscape.jpg" alt="Bay Area Landscape Hand-Drawn">
 
     </body>

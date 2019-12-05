@@ -39,12 +39,12 @@ $foreground-color: darkslategrey;
 
 
 html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #020202;
-    font-family: $font;
-    overflow-x: hidden; 
-    width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #020202;
+  font-family: $font;
+  overflow-x: hidden; 
+  width: 100vw;
 }
 
 .container {
@@ -52,6 +52,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .logo {
@@ -185,12 +186,18 @@ html, body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
-.video-container {
+#video-container {
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 45px;
+
+    @media screen and (max-width: 600px) {
+      top: 0;
+  }
 }
 
 #video {
@@ -205,7 +212,7 @@ html, body {
   font-size: 40px;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 7%;
+  padding-top: 7%;
   @media screen and (max-width: 560px) {
     font-size: 20px;
   }
@@ -217,7 +224,7 @@ html, body {
   font-size: 40px;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 4%;
+  padding-top: 4%;
   @media screen and (max-width: 560px) {
     font-size: 20px;
   }
@@ -319,4 +326,37 @@ $strips-angle:45deg;//90deg;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: dash-animation 50s infinite linear;
+}
+
+.video-nav-container {
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 1em;
+  position: relative;
+  top: 80px;
+
+  a {
+    margin-right: 50px;
+    border-bottom: 1px solid transparent;
+    z-index: 10;
+  }
+
+  a:hover {
+    border-bottom: 1px solid white;
+  }
+
+  a.selected {
+    border-bottom: 1px solid white;
+  }
+
+  :last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 600px) {
+      top: 13px;
+      font-size: 1em;
+  }
 }
