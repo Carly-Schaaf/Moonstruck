@@ -185,10 +185,10 @@ html, body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
-.video-container {
+#video-container {
     display: flex;
     justify-content: center;
 }
@@ -328,14 +328,13 @@ $strips-angle:45deg;//90deg;
   font-size: 2em;
   margin-top: 1em;
 
-  div {
+  a {
     margin-right: 4em;
     border-bottom: 1px solid transparent;
   }
 
-  div:hover {
+  a:hover {
     border-bottom: 1px solid white;
-    cursor: pointer;
   }
 
   :last-child {
