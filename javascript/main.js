@@ -20,9 +20,9 @@ $(() => {
             emailInput.value += dots.pop();
         }, 500)
         e.preventDefault();
-        sendEmail(email).then(() => {
-            successCb(interval)
-        }, (err) => failCb(err, interval));
+        sendEmail(email)
+        .then(() => successCb(interval))
+        .catch((err) => failCb(err, interval));
     });
 
     const failCb = (err, interval) => {
