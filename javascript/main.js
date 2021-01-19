@@ -116,13 +116,16 @@ $(() => {
             let link = ""
             if (window.location.hash === '#video/2019/april') {
                 src = `https://player.vimeo.com/video/333164739?app_id=122963`;
-                link = "april";
+                link = "april 2019";
             } else if (window.location.hash === '#video/2019/june') {
                 src = `https://player.vimeo.com/video/355640738?app_id=122963`;
-                link = "june";
-            } else {
+                link = "june 2019";
+            } else if (window.location.hash === '#video/2019/august') {
                 src = `https://player.vimeo.com/video/370476412?app_id=122963`;
-                link = "august";
+                link = "august 2019";
+            } else {
+                src = `https://player.vimeo.com/video/440121628?app_id=122963`;
+                link = "july 2020";
             }
             if (!(videoPlayer.src === src)) {
                 videoPlayer.src = src;
