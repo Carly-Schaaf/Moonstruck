@@ -110,38 +110,6 @@ $(() => {
         }
     });
 
-    window.addEventListener("hashchange", (e) => {
-        if (window.location.hash.includes("video")) {
-            let src = "";
-            let link = ""
-            if (window.location.hash === '#video/2019/april') {
-                src = `https://player.vimeo.com/video/333164739?app_id=122963`;
-                link = "april 2019";
-            } else if (window.location.hash === '#video/2019/june') {
-                src = `https://player.vimeo.com/video/355640738?app_id=122963`;
-                link = "june 2019";
-            } else if (window.location.hash === '#video/2019/august') {
-                src = `https://player.vimeo.com/video/370476412?app_id=122963`;
-                link = "august 2019";
-            } else {
-                src = `https://player.vimeo.com/video/440121628?app_id=122963`;
-                link = "july 2020";
-            }
-            if (!(videoPlayer.src === src)) {
-                videoPlayer.src = src;
-            }
-
-            const children = videoNav.children;
-            for (let index = 0; index < children.length; index++) {
-                const child = children[index];
-                child.classList.remove("selected");
-            }
-            const selectedChild = document.getElementById(link);
-            selectedChild.classList.add("selected");
-
-        }
-    })
-
     const moon = document.getElementById("moon");
     window.onload = () => {
         moon.classList.add("moon-hover");
