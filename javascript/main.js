@@ -59,7 +59,7 @@ $(() => {
 
     watch.addEventListener("click", (e) => {
         if (!alreadyWatched) {
-            window.location.hash = "#video/2019/april";
+            window.location.hash = "#video/2019/july";
             alreadyWatched = true;
         }
 
