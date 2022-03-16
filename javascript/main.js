@@ -1,54 +1,16 @@
 $(() => {
     window.location.hash = "";
 
-    const emailInput = document.getElementById("email-input");
-    let email = "";
-    emailInput.addEventListener("change", (e) => {
-        e.preventDefault();
-        email += e.target.value
+    const ticketButtonContainer = document.getElementById('map-submit');
+    ticketButtonContainer.addEventListener('click', () => {
+        window.open("https://www.tickettailor.com/events/moonstruck/669840", '_blank').focus();
     });
 
-    const mapForm = document.getElementsByClassName("map-form")[0];
-    mapForm.addEventListener("submit", (e) => {
-        let dots = [".", ".", "."];
-        emailInput.value = dots.pop();
-        const interval = setInterval(() => {
-            if (dots.length === 0) {
-                emailInput.value = "";
-                dots = [".", ".", "."];
-            }
-            emailInput.value += dots.pop();
-        }, 500)
-        e.preventDefault();
-        sendEmail(email)
-        .then(() => successCb(interval))
-        .catch((err) => failCb(err, interval));
-    });
 
-    const failCb = (err, interval) => {
-        console.log(err.responseJSON)
-        clearInterval(interval);
-        emailInput.value = "hm, that email's not valid";
-        email = "";
-    };
-
-    const successCb = (interval) => {
-        clearInterval(interval);
-        emailInput.value = "check your inbox :)";
-        email = "";
-    };
-
-    const sendEmail = () => {
-        emailjs.init("user_UxeLdiW1OeBWci89CbGWV");
-        const service_id = "default_service";
-        const template_id = "moonstruck_map_pending";
-        return emailjs.send(service_id, template_id, {"email": email});
-    };
 
     const watch = document.getElementById("click-watch");
     const videoSection = document.getElementById("video-section");
     const videoNav = document.getElementById("video-nav");
-    const videoPlayer = document.getElementById("video");
     let alreadyWatched = false;
 
     const about = document.getElementById("click-about");

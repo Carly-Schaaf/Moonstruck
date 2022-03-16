@@ -73,8 +73,13 @@ html, body {
   transform: rotate(360deg); }
 
 .rsvp {
-  width: 100%;
-  text-align: center; }
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100% !important;
+  text-align: center;
+  height: 100px;
+  width: 600px; }
 
 .map-form {
   background-color: transparent;
@@ -107,15 +112,16 @@ html, body {
   z-index: 7;
   background-color: darkseagreen;
   box-sizing: border-box;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 20px 90px;
   color: darkslategrey;
-  margin-left: 15px;
-  height: 50px;
-  width: 300px; }
+  font-size: 40px; }
   @media screen and (max-width: 560px) {
     #map-submit {
-      margin-left: 0px; } }
+      padding: 5px 90px;
+      font-size: 20px; } }
+
+#map-submit a {
+  width: 100%; }
 
 #map-submit:hover {
   cursor: pointer;

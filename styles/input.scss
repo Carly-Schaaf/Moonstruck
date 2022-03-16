@@ -41,7 +41,7 @@ html, body {
   padding: 0;
   background-color: #020202;
   font-family: $font;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   width: 100vw;
 }
 
@@ -54,16 +54,16 @@ html, body {
 }
 
 .logo {
-    height: auto; 
-    width: auto; 
-    max-width: 100vw; 
+    height: auto;
+    width: auto;
+    max-width: 100vw;
     max-height: 100vh;
 }
 
 .moon {
   z-index: 5;
-  height: auto; 
-  width: auto; 
+  height: auto;
+  width: auto;
   max-width: 92%;
   max-height: 125%;
   position: absolute;
@@ -89,8 +89,13 @@ html, body {
 }
 
 .rsvp {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100% !important;
   text-align: center;
+  height: 100px;
+  width: 600px;
 }
 
 
@@ -118,7 +123,6 @@ html, body {
   height: 50px;
   width: 300px;
    @media screen and (max-width: 560px) {
-    
   }
 }
 
@@ -132,15 +136,17 @@ html, body {
   z-index: 7;
   background-color: darkseagreen;
   box-sizing: border-box;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 20px 90px;
   color: $foreground-color;
-  margin-left: 15px;
-  height: 50px;
-  width: 300px;
+  font-size: 40px;
   @media screen and (max-width: 560px) {
-    margin-left: 0px;
+    padding: 5px 90px;
+    font-size: 20px;
   }
+}
+
+#map-submit a {
+  width: 100%;
 }
 
 #map-submit:hover {
@@ -229,9 +235,9 @@ html, body {
 }
 
 .landscape {
-    height: auto; 
-    width: auto; 
-    max-width: 100vw; 
+    height: auto;
+    width: auto;
+    max-width: 100vw;
     max-height: 100vh;
     box-shadow: 0 50vh 0 50vh;
 }
